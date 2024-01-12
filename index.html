@@ -20,6 +20,7 @@
         <li class="menu__item"><a href="https://github.com/MeDBeD1" class="link link--dark"><i class="fa fa-github"></i> Github</a></li>
       </ul>
     </nav>
+    <div id="overlay" class="overlay"></div>
     <div class="hero">
       <h1 class="hero__title">Assistant</h1>
       <p class="hero__description">Делайте свои заметки при помощи ИИ</p>
@@ -75,9 +76,9 @@
         <ul class="keybinding__detail">
           <h3 class="keybinding__title">По умолчанию</h3>
           <li>Выйти <span class="keybinding__label">Ctrl+C</span></li>
-          <li>Сохранить <span class="keybinding__label">Cmd+S</span></li>
+          <li>Сохранить <span class="keybinding__label">Ctrl+S</span></li>
           <li>Сохранить и выйти <span class="keybinding__label">Ctrl+D</span></li>
-          <li>Отмена <span class="keybinding__label">Cmd+Z</span></li>
+          <li>Отмена <span class="keybinding__label">Ctrl+Z</span></li>
         </ul>
         <ul class="keybinding__detail">
           <h3 class="keybinding__title">Разметка</h3>
@@ -134,11 +135,29 @@
           </div>
         </div>
         <div class="changelog__callout">
-          <a href="#" class="button--secondary">Показать больше!</a>
+          <div class="button--secondary" id="popupButton">Свяжитесь с нами!</div>
+      </div>
+      <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <h2>Свяжитесь с нами!</h2>
+
+            <form class="tab__container" action="#" method="post">
+                <label for="name">Ваше имя:</label>
+                <input type="text" class="form" name="name" required>
+
+                <label for="email">Ваша Почта:</label>
+                <input type="email" class="form" name="email" required>
+
+                <label for="message">Сообщение:</label>
+                <textarea id="message" class="form" rows="4" required></textarea>
+
+                <button class="button--secondary" type="submit">Отправить</button>
+            </form>
         </div>
       </div>
     </div>
-    <footer class="footer">Scribbler is a free HTML template created exclusively for <a href="https://tympanus.net/codrops/" target="_blank" class="link link--light">Codrops</a>.</footer>
+    <footer class="footer">Все права защищены 2024.</footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
     <script>hljs.initHighlightingOnLoad();</script>
     <script src="assistant.js"></script>

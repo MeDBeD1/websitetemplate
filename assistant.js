@@ -126,3 +126,30 @@ window.addEventListener('load', function(){
   }
   icon.addEventListener('click', showNav);
 });
+
+document.getElementById('popupButton').addEventListener('click', function () {
+  document.getElementById('overlay').style.display = 'block';
+  document.getElementById('popup').style.display = 'block';
+});
+
+function closePopup() {
+  document.getElementById('overlay').style.display = 'none';
+  document.getElementById('popup').style.display = 'none';
+}
+
+function submitForm() {
+  const form = document.getElementById('contactForm');
+  const formData = new FormData(form);
+
+  fetch('/process_form', {
+      method: 'POST',
+      body: formData
+  })
+  .then(response => response.json())
+  .then(data => {
+      console.log(data);
+  })
+  .catch(error => {
+      console.error('Error:', error);
+  });
+}
