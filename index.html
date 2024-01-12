@@ -1,0 +1,146 @@
+<!doctype html>
+<html>
+  <head>
+      <meta charset="utf-8">
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Scribbler - a codding landing page template for codrops</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800,900" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/railscasts.min.css">
+      <link rel="stylesheet" href="global.css">
+      <link rel="stylesheet" href="landing.css">
+  </head>
+  <body>
+    <nav>
+      <div class="logo"></div>
+      <ul class="menu">
+        <div class="menu__item toggle"><span></span></div>
+        <li class="menu__item"><a href="doc.html" class="link link--dark"><i class="fa fa-book"></i> Документация</a></li>
+        <li class="menu__item"><a href="https://github.com/MeDBeD1" class="link link--dark"><i class="fa fa-github"></i> Github</a></li>
+      </ul>
+    </nav>
+    <div class="hero">
+      <h1 class="hero__title">Assistant</h1>
+      <p class="hero__description">Делайте свои заметки при помощи ИИ</p>
+    </div>
+    <div class="hero__terminal">
+      <pre>
+        <code class="shell-session demo">iloverksi ~ $ </code>
+      </pre>
+    </div>
+    <div class="wrapper">
+      <div class="installation">
+        <h3 class="section__title">Установка</h3>
+        <div class="tab__container">
+          <ul class="tab__menu">
+            <li class="tab active" data-tab="mac">mac</li>
+            <li class="tab" data-tab="linux">linux</li>
+            <li class="tab" data-tab="win">win</li>
+          </ul>
+          <pre class="nohighlight code">
+            <code class="tab__pane active mac">$  brew install assistant</code>
+            <code class="tab__pane linux">$  apt-get install assistant</code>
+            <code class="tab__pane win">$  gem install assistant</code>
+          </pre>
+        </div>
+      </div>
+      <div class="feature">
+        <div class="feature__item">
+          <h3 class="section__title">Быстр и лёгок</h3>
+          <p>Работайте сразу в терминале, никакого больше блокнота и ожиданий загрузки.</p>
+        </div>
+        <div class="feature__item">
+          <h3 class="section__title">Синхронизация файлов</h3>
+          <p>Все данные могут быть сохранены в предпочтительном облачном сервисе.</p>
+        </div>
+        <div class="feature__item">
+          <h3 class="section__title">Интеграция ИИ</h3>
+          <p>Искуственный интелект поможет вам составить план на основе ваших действий!</p>
+        </div>
+        <div class="feature__item">
+          <h3 class="section__title">Легко настроить</h3>
+          <p>Храните все свои настройки в одном <span class="code code--inline">config.json</span> файле.</p>
+        </div>
+        <div class="feature__item">
+          <h3 class="section__title">Выделение</h3>
+          <p>Для лучшей навигации Assistant использует яркое и разборчиваемое выделение текста.</p>
+        </div>
+        <div class="feature__item">
+          <h3 class="section__title">Горячие клавиши</h3>
+          <p>У Assistant есть всем знакомые сочетания клавиш. Но и их можно настроить в <span class="code code--inline">bindings.json</span>! </p>
+        </div>
+      </div>
+      <div class="keybinding">
+        <ul class="keybinding__detail">
+          <h3 class="keybinding__title">По умолчанию</h3>
+          <li>Выйти <span class="keybinding__label">Ctrl+C</span></li>
+          <li>Сохранить <span class="keybinding__label">Cmd+S</span></li>
+          <li>Сохранить и выйти <span class="keybinding__label">Ctrl+D</span></li>
+          <li>Отмена <span class="keybinding__label">Cmd+Z</span></li>
+        </ul>
+        <ul class="keybinding__detail">
+          <h3 class="keybinding__title">Разметка</h3>
+          <li><span class="keybinding__label">Ctrl+A</span> Вставить ссылку с разметкой</li>
+          <li><span class="keybinding__label">Ctrl+I</span> Вставить изображение с разметкой</li>
+          <li><span class="keybinding__label">Ctrl+V</span> Вставить видео с YouTube</li>
+          <li><span class="keybinding__label">Ctrl+T</span> Вставить таблицу</li>
+        </ul>
+      </div>
+      <div class="callout">
+        <p>Более подробно смотрите в нашей документации</p>
+        <a href="doc.html" class="button--primary">Документация</a>
+      </div>
+    </div>
+    <div class="changelog">
+      <div class="wrapper">
+        <h3 class="section__title">Список изменений</h3>
+        <div class="changelog__item">
+          <div class="changelog__meta">
+            <h4 class="changelog__title">v0.6</h4>
+            <small class="changelog__date">10/12/2023</small>
+          </div>
+          <div class="changelog__detail">
+            <ul>
+              <li>Новые сочетания клавиш</li>
+              <li>Обновлённый дизайн</li>
+              <li>SSL Верификация для веб-хуков</li>
+              <li>Распознование эмодзи</li>
+            </ul>
+          </div>
+        </div>
+        <div class="changelog__item">
+          <div class="changelog__meta">
+            <h4 class="changelog__title">v0.6</h4>
+            <small class="changelog__date">7/10/2023</small>
+          </div>
+          <div class="changelog__detail">
+            <ul>
+              <li>Исправление критической ошибки</li>
+              <li>Добавлено выделение текста</li>
+            </ul>
+          </div>
+        </div>
+        <div class="changelog__item">
+          <div class="changelog__meta">
+            <h4 class="changelog__title">v0.5</h4>
+            <small class="changelog__date">30/9/2023</small>
+          </div>
+          <div class="changelog__detail">
+            <ul>
+              <li>Обновление ИИ</li>
+              <li>Добавление поиска</li>
+            </ul>
+          </div>
+        </div>
+        <div class="changelog__callout">
+          <a href="#" class="button--secondary">Свяжитесь с нами!</a>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">Scribbler is a free HTML template created exclusively for <a href="https://tympanus.net/codrops/" target="_blank" class="link link--light">Codrops</a>.</footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="assistant.js"></script>
+  </body>
+</html>

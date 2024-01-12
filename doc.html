@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Assistant - документация</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="doc.css">
+    <link rel="author" href="humans.txt">
+  </head>
+  <body>
+    <div class="doc__bg"></div>
+    <nav class="header">
+      <h1 class="logo">Assistant <span class="logo__thin">Doc</span></h1>
+      <ul class="menu">
+        <div class="menu__item toggle"><span></span></div>
+        <li class="menu__item"><a href="" class="link link--dark"><i class="fa fa-github"></i> Github</a></li>
+        <li class="menu__item"><a href="index.html" class="link link--dark"><i class="fa fa-home"></i> Главная</a></li>
+      </ul>
+    </nav>
+    <div class="wrapper">
+      <aside class="doc__nav">
+        <ul>
+          <li class="js-btn selected">Начало работы</li>
+          <li class="js-btn">Конфигурация</li>
+          <li class="js-btn">Горячие клавиши</li>
+        </ul>
+      </aside>
+      <article class="doc__content">
+        <section class="js-section">
+          <h3 class="section__title">Начало работы</h3>
+          <p>В этом блоке собрана подробная документация по работе с Assistant, например установка и конфигурация.</p>
+          <h3 class="section__title">Установка</h3>
+          <div class="code__block code__block--notabs">
+            <pre class="code code--block">
+              <code>
+                $ assistant  ——config
+                  {
+                    “runInBackground”: true, 
+                    “highlighting“: true,
+                    “prettyTable”: false,
+                    “font”: [“Helvetica”, “sans-serif”],
+                    “folder”: “~/Desktop“
+                  }
+              </code>
+            </pre>
+          </div>
+        </section>
+        <section class="js-section">
+          <h3 class="section__title">Конфигурация</h3>
+          <p>Тут указаны конфигурируемые настройки Assistant для максимаально удобного пользования.</p>
+          <table>
+            <tr>
+              <th>Опция</th>
+              <th>Значение</th>
+              <th>По умолчанию</th>
+            </tr>
+            <tr>
+              <td>runInBackground</td>
+              <td>Работа в фоновом режиме после закрытия окна.</td>
+              <td>false</td>
+            </tr>
+            <tr>
+              <td>highlighting</td>
+              <td>Выделение синтаксиса.</td>
+              <td>true</td>
+            </tr>
+            <tr>
+              <td>prettyTable</td>
+              <td>Выводить данные в форме таблицы.</td>
+              <td>true</td>
+            </tr>
+          </table>
+          <hr />
+        </section>
+        <section class="js-section">
+          <h3 class="section__title">Горячие клавиши</h3>
+          <div class="keybinding">
+            <ul class="keybinding__detail">
+              <h3 class="keybinding__title">По умолчанию</h3>
+              <li>Выйти <span class="keybinding__label">Ctrl+C</span></li>
+              <li>Сохранить <span class="keybinding__label">Cmd+S</span></li>
+              <li>Сохранить и выйти <span class="keybinding__label">Ctrl+D</span></li>
+              <li>Отмена <span class="keybinding__label">Cmd+Z</span></li>
+            </ul>
+            <ul class="keybinding__detail">
+              <h3 class="keybinding__title">Разметка</h3>
+              <li><span class="keybinding__label">Ctrl+A</span> Вставить ссылку с разметкой</li>
+              <li><span class="keybinding__label">Ctrl+I</span> Вставить изображение с разметкой</li>
+              <li><span class="keybinding__label">Ctrl+V</span> Вставить видео с YouTube</li>
+              <li><span class="keybinding__label">Ctrl+T</span> Вставить таблицу</li>
+            </ul>
+          </div>
+        </section>
+      </article>
+    </div>
+
+    <footer class="footer">Все права защищены 2024</footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="assistant.js"></script>
+  </body>
+</html>
